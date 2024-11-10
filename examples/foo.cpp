@@ -21,10 +21,12 @@ int main() {
         
         duski.set_background_color(Tools::ColorRGBA(35, 35, 35, 255));
         duski.fill_rect(
-            0, 0,
-            Tools::Decuple(50), Tools::Decuple(50),
+            duski_window.GetCoreWindow().GetWidth() / 2 - Tools::Decuple(10) / 2,
+            duski_window.GetCoreWindow().GetHeight() / 2 - Tools::Decuple(10) / 2,
+            Tools::Decuple(10), Tools::Decuple(10),
             Tools::ColorRGBA(120, 250, 57, 255)
         );
+        duski.fill_circle(Tools::Decuple(10), Tools::Decuple(10), Tools::Decuple(10), Tools::ColorRGBA(255, 255, 255, 255));
 
         duski.render();
     }

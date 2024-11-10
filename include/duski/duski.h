@@ -43,7 +43,7 @@ namespace Duski {
 			m_API->init_context(m_Window.GetCoreWindow());
 			m_API->init_resources(vertex_shader_source, fragment_shader_source);
 
-			m_Framebuffer = new uint32_t[m_Window.GetCoreWindow().GetWidth() * m_Window.GetCoreWindow().GetHeight()];
+				m_Framebuffer = new uint32_t[m_Window.GetCoreWindow().GetWidth() * m_Window.GetCoreWindow().GetHeight()];
 			std::fill(m_Framebuffer, m_Framebuffer
 				+ m_Window.GetCoreWindow().GetWidth() * m_Window.GetCoreWindow().GetHeight(), 0x00000000);
 		}
@@ -56,6 +56,11 @@ namespace Duski {
 		void fill_rect(
 			size_t y_pos, size_t x_pos,
 			size_t width, size_t height,
+			uint32_t color
+		);
+		void fill_circle(
+			size_t center_x, size_t center_y,
+			size_t radius,
 			uint32_t color
 		);
 	private:
